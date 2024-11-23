@@ -1,0 +1,414 @@
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .footer-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        .social-icons a {
+            color: #ffffff;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        .social-icons a:hover {
+            color: #ff6f61;
+        }
+        .subscribe-form input[type="email"] {
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            width: 300px;
+            margin-right: 10px;
+        }
+        .subscribe-form button {
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .subscribe-form button:hover {
+            background-color: #ff4a3d;
+        }
+        hr {
+            border-top: 1px solid #2e2e3e;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-4">
+                    <h2 class="footer-title">Stay in touch with us</h2>
+                    <p>Receive the latest updates about our products & promotions</p>
+                    <form class="subscribe-form d-flex justify-content-center">
+                        <input type="email" placeholder="You email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="footer-title">Cartzilla</h3>
+                    <p>With a wide selection of fresh produce, pantry staples, and household essentials, we've got everything you need just a click away.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p class="copyright">© All rights reserved. Made with <i class="fas fa-heart"></i> by Createx Studio</p>
+                </div>
+                <div class="col-md-2">
+                    <h3 class="footer-title">Categories</h3>
+                    <a href="#" class="footer-link">Weekly sale</a>
+                    <a href="#" class="footer-link">Special price</a>
+                    <a href="#" class="footer-link">Easter is coming</a>
+                    <a href="#" class="footer-link">Italian dinner</a>
+                    <a href="#" class="footer-link">Fresh fruits</a>
+                    <a href="#" class="footer-link">Exotic fruits</a>
+                </div>
+                <div class="col-md-2">
+                    <h3 class="footer-title">Company</h3>
+                    <a href="#" class="footer-link">Blog and news</a>
+                    <a href="#" class="footer-link">About us</a>
+                    <a href="#" class="footer-link">FAQ page</a>
+                    <a href="#" class="footer-link">Contact us</a>
+                    <a href="#" class="footer-link">Careers</a>
+                </div>
+                <div class="col-md-2">
+                    <h3 class="footer-title">Account</h3>
+                    <a href="#" class="footer-link">Your account</a>
+                    <a href="#" class="footer-link">Shipping & policies</a>
+                    <a href="#" class="footer-link">Refunds & replacements</a>
+                    <a href="#" class="footer-link">Order tracking</a>
+                    <a href="#" class="footer-link">Delivery info</a>
+                    <a href="#" class="footer-link">Taxes & fees</a>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="footer-title">Customer service</h3>
+                    <a href="#" class="footer-link">Payment methods</a>
+                    <a href="#" class="footer-link">Money back guarantee</a>
+                    <a href="#" class="footer-link">Refunds & replacements</a>
+                    <a href="#" class="footer-link">Order tracking</a>
+                    <a href="#" class="footer-link">Delivery info</a>
+                    <a href="#" class="footer-link">Shipping</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+<!-- Card layout -->
+<div class="card" style="width: 18rem;" id="item-card">
+    <img src="item-image.jpg" class="card-img-top" alt="Item Image">
+    <div class="card-body">
+      <h5 class="card-title">Item 1</h5>
+      <p class="card-text">Item description</p>
+    </div>
+  </div>
+  
+  <!-- Cart items section -->
+  <div id="cart-items">
+    <h2>Cart Items</h2>
+    <div id="cart-items-list"></div>
+  </div>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+To create a button that, when clicked, opens a side panel with the shopping cart, you can use Bootstrap's offcanvas component. Here is the complete code to achieve this:
+
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+        }
+        .shopping-cart {
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .shopping-cart h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .shopping-cart .close {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .alert {
+            background-color: #e6f7e6;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .alert span {
+            font-weight: bold;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .item .details {
+            flex-grow: 1;
+        }
+        .item .details p {
+            margin: 0;
+        }
+        .item .details .price {
+            font-weight: bold;
+        }
+        .item .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .item .quantity button {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .item .quantity input {
+            width: 40px;
+            text-align: center;
+            border: none;
+            margin: 0 5px;
+        }
+        .item .remove {
+            font-size: 20px;
+            cursor: pointer;
+            color: #888;
+        }
+        .subtotal {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons .view-cart {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .buttons .checkout {
+            background-color: #ff5a5f;
+            color: #fff;
+        }
+  </style>
+ </head>
+ <body>
+  <button class="btn btn-primary" data-bs-target="#offcanvasCart" data-bs-toggle="offcanvas" type="button">
+   Add to Cart
+  </button>
+  <div aria-hidden="true" aria-labelledby="offcanvasCartLabel" class="offcanvas offcanvas-end" id="offcanvasCart" tabindex="-1">
+   <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasCartLabel">
+     Shopping cart
+    </h2>
+    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas" type="button">
+    </button>
+   </div>
+   <div class="offcanvas-body">
+    <div class="shopping-cart">
+     <div class="alert">
+      <span>
+       Congratulations 🎉
+      </span>
+      You have added more than
+      <span>
+       $50
+      </span>
+      to your cart.
+      <span>
+       Delivery is free for you!
+      </span>
+     </div>
+     <div class="item">
+      <img alt="Fresh orange Klementina, Spain" height="60" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-8zxZ63GjrCEpSzrtJZGczyFh.png?st=2024-09-13T05%3A52%3A41Z&amp;se=2024-09-13T07%3A52%3A41Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-12T23%3A19%3A49Z&amp;ske=2024-09-13T23%3A19%3A49Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=W/8NFJy/ypBOP4y4cYWVn%2BVvSFEoeMHuOC7MSur3WKE%3D" width="60"/>
+      <div class="details">
+       <p>
+        Fresh orange Klementina, Spain
+       </p>
+       <p class="price">
+        $3.12
+       </p>
+      </div>
+      <div class="quantity">
+       <button>
+        -
+       </button>
+       <input type="text" value="2"/>
+       <button>
+        +
+       </button>
+      </div>
+      <span class="remove">
+       ×
+      </span>
+     </div>
+     <div class="item">
+      <img alt="Pesto sauce Barilla with basil, Italy" height="60" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-RLo9GZDhc6hDeRzDXhkifRRx.png?st=2024-09-13T05%3A52%3A38Z&amp;se=2024-09-13T07%3A52%3A38Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-12T23%3A42%3A43Z&amp;ske=2024-09-13T23%3A42%3A43Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=CNjRtr1aOWIAh8iF8sTNibwqEuLJKxS35zZXxVfeC7M%3D" width="60"/>
+      <div class="details">
+       <p>
+        Pesto sauce Barilla with basil, Italy
+       </p>
+       <p class="price">
+        $3.95
+       </p>
+      </div>
+      <div class="quantity">
+       <button>
+        -
+       </button>
+       <input type="text" value="1"/>
+       <button>
+        +
+       </button>
+      </div>
+      <span class="remove">
+       ×
+      </span>
+     </div>
+     <div class="item">
+      <img alt="Steak salmon fillet with rosemary" height="60" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-qn9WvFGwYh8uwQ32A40KHcki.png?st=2024-09-13T05%3A52%3A39Z&amp;se=2024-09-13T07%3A52%3A39Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-12T23%3A14%3A48Z&amp;ske=2024-09-13T23%3A14%3A48Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=bwmNlUuAfzOpIk/Od11MzQiRitHHeKrbWXVdWmp0N8Y%3D" width="60"/>
+      <div class="details">
+       <p>
+        Steak salmon fillet with rosemary
+       </p>
+       <p class="price">
+        $27.00
+       </p>
+      </div>
+      <div class="quantity">
+       <button>
+        -
+       </button>
+       <input type="text" value="2"/>
+       <button>
+        +
+       </button>
+      </div>
+      <span class="remove">
+       ×
+      </span>
+     </div>
+     <div class="item">
+      <img alt="Sprite soda lemon lime, can" height="60" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-X3IPkacqIvOBCNG5bFtnkTdP.png?st=2024-09-13T05%3A52%3A38Z&amp;se=2024-09-13T07%3A52%3A38Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-12T23%3A12%3A39Z&amp;ske=2024-09-13T23%3A12%3A39Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=%2BC8a2foCl9WF4LlJ0xIrlwZ6JNu/kIznTdwhsN75F2U%3D" width="60"/>
+      <div class="details">
+       <p>
+        Sprite soda lemon lime, can
+       </p>
+       <p class="price">
+        $0.80
+       </p>
+      </div>
+      <div class="quantity">
+       <button>
+        -
+       </button>
+       <input type="text" value="2"/>
+       <button>
+        +
+       </button>
+      </div>
+      <span class="remove">
+       ×
+      </span>
+     </div>
+     <div class="subtotal">
+      <span>
+       Subtotal:
+      </span>
+      <span>
+       $68.91
+      </span>
+     </div>
+     <div class="buttons">
+      <button class="view-cart">
+       View cart
+      </button>
+      <button class="checkout">
+       Checkout
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script crossorigin="anonymous" integrity="sha384-5oRf5+5X5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J
+
+
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
